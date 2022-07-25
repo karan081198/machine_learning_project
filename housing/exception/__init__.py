@@ -23,6 +23,6 @@ def get_detailed_error_meaasage(error_message:Exception, error_details:sys)->str
 def __str__(self):
     return self.error_message
 
-def __repr(self):
+def __repr__(self):
     return HousingException.__name__.str()
          
