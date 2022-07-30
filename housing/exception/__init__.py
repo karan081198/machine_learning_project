@@ -10,7 +10,7 @@ class HousingException(Exception):
         
         
 @staticmethod
-def get_detailed_error_meaasage(error_message:Exception, error_details:sys)->str:
+def get_detailed_error_message(error_message:Exception, error_details:sys)->str:
     
     #error message
     _,_ ,exec_tb = error_details.exc_info()
