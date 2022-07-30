@@ -1,6 +1,8 @@
 from tkinter import E
 
 from scipy.sparse import data
+
+
 from housing.config.configuration import Configuration
 from housing.constant import DATA_INGESTION_ARTIFACT_DIR
 from housing.logger import logging
@@ -25,8 +27,9 @@ class Pipeline:
         try:
             data_ingestion = DataIngestion(data_ingestion_config= self.config.get_data_ingestion_config())
             return data_ingestion.initiate_data_ingestion()
+        
         except Exception as e:
-            raise HousingException(e,sys) from e  
+            raise HousingException(e,sys) from e 
         
     def start_data_validation(self):
         pass
@@ -46,7 +49,7 @@ class Pipeline:
     def run_pipeline(self):
         try:
             #data_ingestion
-            data_ingestion_artifact = self.start_data_ingestion()
+            data_ingestion_artifact = self.start_data_ingestion
             
         except Exception as e:
             raise HousingException(e,sys) from e

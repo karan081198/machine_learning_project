@@ -1,8 +1,11 @@
 from sklearn import pipeline
+
+
 from housing.pipeline.pipeline import Pipeline
+
+
 from housing.exception import HousingException
 from housing.logger import logging
-from housing.config.configuration import Configuration
 import os
 
 
@@ -17,5 +20,5 @@ def main():
         logging.error(f"{e}")
         print(e)
         
-if __name__=='__main__':
+if __name__ == '__main__':
     main()
