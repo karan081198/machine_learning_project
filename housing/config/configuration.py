@@ -74,7 +74,7 @@ class Configuartion:
         try:
             artifact_dir = self.training_pipeline_config.artifact_dir
             
-            data_ingestion_artifact_dir=os.path.join(
+            data_validation_artifact_dir=os.path.join(
                 artifact_dir,
                 DATA_VALIDATION_ARTIFACT_DIR_NAME,
                 self.time_stamp
@@ -87,11 +87,11 @@ class Configuartion:
             data_validation_config[DATA_VALIDATION_SCHEMA_FILE_NAME_KEY]
             )
             
-            report_file_path = os.path.join(artifact_dir,
+            report_file_path = os.path.join(data_validation_artifact_dir,
             data_validation_config[DATA_VALIDATION_REPORT_FILE_NAME_KEY]
             )
             
-            report_page_file_path =os.path.join(artifact_dir,
+            report_page_file_path =os.path.join(data_validation_artifact_dir,
             data_validation_config[DATA_VALIDATION_REPORT_PAGE_FILE_NAME_KEY]         
             )
             

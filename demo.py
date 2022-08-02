@@ -1,4 +1,6 @@
 from sklearn import pipeline
+from housing.component import data_validation
+from housing.config.configuration import Configuartion
 
 
 from housing.pipeline.pipeline import Pipeline
@@ -11,11 +13,11 @@ import os
 
 def main():
     try:
+        
         pipeline = Pipeline()
         pipeline.run_pipeline()
-        
-        
-        
+        #data_validation_config = Configuartion().get_data_validation_config()
+        #print(data_validation_config) 
     except Exception as e:
         logging.error(f"{e}")
         print(e)
