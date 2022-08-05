@@ -6,3 +6,5 @@ pandas
 -e .
 PyYaml
 evidently
+dill
+
